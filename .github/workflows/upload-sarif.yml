@@ -16,6 +16,13 @@ jobs:
     
     - name: Compile
       run: |
+        wget -q -O - https://cdn.pvs-studio.com/etc/pubkey.txt | apt-key add -
+
+        wget -O /etc/apt/sources.list.d/viva64.list https://cdn.pvs-studio.com/etc/viva64.list
+
+        apt-get update
+        apt-get install pvs-studio
+        
         touch makefile
         echo "file.o: f.c" > makefile
         echo -e "\tgcc -c -Wall -Wextra -Wpedantic f.c" >> makefile
