@@ -8,7 +8,7 @@ on:
 
 jobs:
   build:
-    runs-on: self-hosted #ubuntu --- con PVS-Studio installato
+    runs-on: ubuntu-latest #ubuntu --- con PVS-Studio installato
     steps:
     # This step checks out a copy of your repository.
     - name: Checkout repository
