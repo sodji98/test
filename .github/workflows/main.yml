@@ -1,4 +1,12 @@
-name: Generate Security Report
-uses: peter-murray/github-security-report-action@v2
-with:
-  token: ${{ secrets.SECURITY_TOKEN }}
+on:
+  workflow_dispatch:
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+    
+    - name: Generate Security Report
+      uses: peter-murray/github-security-report-action@v2
+    
+      with:
+        token: ${{ secrets.SECURITY_TOKEN }}
