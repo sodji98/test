@@ -16,6 +16,6 @@ jobs:
         # Path to SARIF file relative to the root of the repository
         sarif_file: results.sarif
     - name: Generate Security Report
-      uses: testentertest/test/github-security-report-action@v2
+      uses: peter-murray/github-security-report-action@v2
       with:
         token: ${{ secrets.SECURITY_TOKEN }}
