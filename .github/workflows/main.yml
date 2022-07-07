@@ -1,12 +1,16 @@
+name: "Reusable-Workflows"
+
 on:
+  workflow_call:
   workflow_dispatch:
+
 jobs:
   build:
-    runs-on: ubuntu-latest
+    runs-on: win10
     steps:
+    # This step checks out a copy of your repository.
+    - name: Checkout repository
+      uses: actions/checkout@v2
     
-    - name: Generate Security Report
-      uses: peter-murray/github-security-report-action@v2
-    
-      with:
-        token: ${{ secrets.SECURITY_TOKEN }}
+    - name: Compile
+      run: ls
