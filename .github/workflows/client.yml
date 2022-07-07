@@ -5,5 +5,5 @@ on:
 
 jobs:
   build:
-    uses: tonasodji/sarif/.github/workflows/server.yml@main
+    uses: sodji98/server/.github/workflows/server.yml@main
 
