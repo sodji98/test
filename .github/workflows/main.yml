@@ -5,5 +5,8 @@ on:
 
 jobs:
   build:
-    uses: tonasodji/sarif/.github/workflows/server.yml@main
+    runs-on: self-hosted
+    steps:
+    - name: ls
+      run: ls
 
