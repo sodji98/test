@@ -4,9 +4,6 @@ on:
   workflow_dispatch:
 
 jobs:
-  call-workflow:
-    uses: tonasodji/sarif/.github/workflows/reuse.yml@main
-
   call-workflow-passing-data:
     uses: tonasodji/sarif/.github/workflows/reuse.yml@main
     with:
