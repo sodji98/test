@@ -1,15 +1,15 @@
-name: "client"
+name: Call a reusable workflow
 
 on:
   workflow_dispatch:
 
 jobs:
-  test:
-    runs-on: ubuntu-latest
-    steps:
-    - name: run
-      run: ls
-    
-  client:
-    uses: tonasodji/sarif/.github/workflows/server.yml@main
+  call-workflow:
+    uses: octo-org/example-repo/.github/workflows/workflow-A.yml@v1
 
+  call-workflow-passing-data:
+    uses: tonasodji/sarif/.github/workflows/reuse.yml@main
+    with:
+      username: sodji98
+    secrets:
+      token: ${{ secrets.TOKEN }}
